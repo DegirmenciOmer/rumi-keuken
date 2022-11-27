@@ -3,14 +3,39 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import Post from "../components/Post";
+import { FC } from "react";
 
-export default function Home({ posts }) {
+export type Tpost = {
+  slug: string;
+  date: string;
+  frontmatter: {
+    cover_image: string;
+    date: string;
+    excerpt: string;
+    title: string;
+  };
+};
+
+type TPostProps = {
+  posts: Tpost[];
+};
+
+export const Home: FC<TPostProps> = ({ posts }) => {
+  console.log(posts);
+
   return (
     <>
       <Head>
         <title>Webdev Next</title>
       </Head>
+      <div className="showcase">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
+        inventore tenetur vel vero ullam nostrum dolorem aperiam fugiat
+        temporibus quae illo, obcaecati non impedit repudiandae aspernatur
+        expedita at dolor perspiciatis.
+      </div>
       <ul className="posts">
+        <h1>Nagerechten</h1>
         {posts
           .sort((a, b) =>
             new Date(b.frontmatter.date) > new Date(a.frontmatter.date) ? 1 : -1
@@ -21,9 +46,9 @@ export default function Home({ posts }) {
       </ul>
     </>
   );
-}
+};
 
-export async function getStaticProps(context) {
+export async function getStaticProps() {
   //get files from the posts directory
   const files = fs.readdirSync(path.join("posts"));
 
@@ -48,3 +73,5 @@ export async function getStaticProps(context) {
     props: { posts }, // will be passed to the page component as props
   };
 }
+
+export default Home;

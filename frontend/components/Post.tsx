@@ -1,13 +1,17 @@
 import Link from "next/link";
-import React from "react";
+import React, { FC } from "react";
+import { Tpost } from "../pages";
+type TPostProps = { post: Tpost };
 
-const Post = ({ post }) => {
+const Post: FC<TPostProps> = ({ post }) => {
   return (
     <div className="card">
-      <img alt="cover image" src={post.frontmatter.cover_image} />
-      <p className="post-date">Posted on {post.frontmatter.date}</p>
+      <img
+        alt="cover image"
+        className="image"
+        src={post.frontmatter.cover_image}
+      />
       <h3>{post.frontmatter.title}</h3>
-      <p className="">{post.frontmatter.excerpt}</p>
       <Link legacyBehavior href={`/blog/${post.slug}`}>
         <a className="btn">Read more</a>
       </Link>

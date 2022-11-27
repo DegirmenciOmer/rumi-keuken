@@ -1,9 +1,9 @@
-import React from "react";
+import React, { FC, PropsWithChildren } from "react";
 import styles from "../styles/Layout.module.css";
 import Header from "./Header";
 import Nav from "./Nav";
 
-const Layout = ({ children }) => {
+const Layout: FC<PropsWithChildren> = ({ children }) => {
   return (
     <>
       <Nav />
