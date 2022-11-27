@@ -1,19 +1,17 @@
 import React, { FC, PropsWithChildren } from "react";
 import styles from "../styles/Layout.module.css";
+import Footer from "./Footer";
 import Header from "./Header";
-import Nav from "./Nav";
 
 const Layout: FC<PropsWithChildren> = ({ children }) => {
   return (
-    <>
-      <Nav />
+    <div className={styles.layout}>
+      <Header />
       <div className={styles.container}>
-        <main className={styles.main}>
-          <Header />
-          {children}
-        </main>
+        <main className={styles.main}>{children}</main>
       </div>
-    </>
+      <Footer />
+    </div>
   );
 };
 

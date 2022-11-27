@@ -1,7 +1,7 @@
 ---
 title: "Nagerechten"
 date: "March 4, 2021"
-excerpt: "We will look at 10 simple tips and tricks to increase the speed of your code when writing JS"
+excerpt: "Descriptions"
 cover_image: "/images/posts/img2.jpg"
 images: ["/images/posts/img1.png", "/images/posts/img2.png"]
 ---
