@@ -11,9 +11,8 @@ const Post: FC<TPostProps> = ({ post }) => {
         className="image"
         src={post.frontmatter.cover_image}
       />
-      <h3>{post.frontmatter.title}</h3>
       <Link legacyBehavior href={`/blog/${post.slug}`}>
-        <a className="btn">Read more</a>
+        <a className="btn">{post.frontmatter.title}</a>
       </Link>
     </div>
   );

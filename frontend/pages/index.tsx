@@ -4,6 +4,11 @@ import path from "path";
 import matter from "gray-matter";
 import Post from "../components/Post";
 import { FC } from "react";
+import {
+  AiFillLinkedin,
+  AiFillGooglePlusCircle,
+  AiFillGithub,
+} from "react-icons/ai";
 
 export type Tpost = {
   slug: string;
@@ -29,21 +34,25 @@ export const Home: FC<TPostProps> = ({ posts }) => {
         <title>Webdev Next</title>
       </Head>
       <div className="showcase">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
-        inventore tenetur vel vero ullam nostrum dolorem aperiam fugiat
-        temporibus quae illo, obcaecati non impedit repudiandae aspernatur
-        expedita at dolor perspiciatis.
+        <h4>
+          Welkom bij Rumi's keuken! Hierbij kun je heerlijke maaltijden met
+          heerlijke goedkope prijzen vinden!
+        </h4>
       </div>
-      <ul className="posts">
-        <h1>Nagerechten</h1>
-        {posts
-          .sort((a, b) =>
-            new Date(b.frontmatter.date) > new Date(a.frontmatter.date) ? 1 : -1
-          )
-          .map((post) => (
-            <Post key={post.slug} post={post} />
-          ))}
-      </ul>
+      <div className="post-card">
+        <h1>Onze Menu</h1>
+        <ul className="posts">
+          {posts
+            .sort((a, b) =>
+              new Date(b.frontmatter.date) > new Date(a.frontmatter.date)
+                ? 1
+                : -1
+            )
+            .map((post) => (
+              <Post key={post.slug} post={post} />
+            ))}
+        </ul>
+      </div>
     </>
   );
 };

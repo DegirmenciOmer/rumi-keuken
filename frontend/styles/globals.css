@@ -9,6 +9,7 @@
 body {
   font-family: "Poppins", sans-serif;
   background-color: #f1d3b3;
+  height: 100vh;
 }
 
 p {
@@ -35,13 +36,6 @@ header {
 
 header a {
   color: #fff;
-}
-
-.container {
-  max-width: 992px;
-  margin: auto;
-  overflow: auto;
-  padding: 0 10px;
 }
 
 .btn {
@@ -71,11 +65,14 @@ header a {
   margin-bottom: 20px;
 }
 
+.post-card {
+  margin: 40px 0;
+}
+
 .posts {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-  margin: 70px 0;
 }
 
 .card {
