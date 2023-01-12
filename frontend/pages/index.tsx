@@ -27,10 +27,10 @@ type TPostProps = {
 
 export const Home: FC<TPostProps> = ({ posts }) => {
   return (
-    <Layout>
+    <Layout title='Home Pagina'>
       <div className='showcase'>
         <h4>
-          Welkom bij Rumi's keuken! Hierbij kun je heerlijke maaltijden met
+          Welkom bij Rumi's keuken! Bij ons kun je heerlijke maaltijden met
           heerlijke goedkope prijzen vinden!
         </h4>
       </div>

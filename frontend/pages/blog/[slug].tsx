@@ -20,7 +20,7 @@ const PostPage: FC<TPostPageProps> = ({
   slug,
 }) => {
   return (
-    <Layout title={`Rumi's Keuken - ${title}`}>
+    <Layout title={`${title}`}>
       <Link legacyBehavior href='/'>
         <a className='btn btn-back'>Terug</a>
       </Link>

@@ -1,16 +1,15 @@
 //import React from 'react'
-import Head from "next/head";
+import Head from 'next/head'
+import Layout from '../components/Layout'
 
 const about = () => {
   return (
-    <div>
-      <Head>
-        <title>About</title>
-      </Head>
+    <Layout title='Over Ons'>
+      <div>
+        <h1>About</h1>
+      </div>
+    </Layout>
+  )
+}
 
-      <h1>About</h1>
-    </div>
-  );
-};
-
-export default about;
+export default about

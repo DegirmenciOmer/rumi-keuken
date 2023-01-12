@@ -19,7 +19,7 @@ const Layout: FC<PropsWithChildren<TLayoutProps>> = ({
   return (
     <div className={styles.layout}>
       <Head>
-        <title>{title}</title>
+        <title>Rumi's Keuken - {title}</title>
         <meta name='description' content={description} />
         <meta name='keywords' content={keywords} />
         <link rel='icon' href='/favicon.ico' />
